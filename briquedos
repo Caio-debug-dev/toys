@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brinquedos - Loja de Brinquedos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8e4d9;
+            padding: 20px;
+        }
+
+        .container-loja {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cabecalho-loja {
+            background-color: #f5f0dc;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-pequena {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .info-usuario {
+            flex: 1;
+        }
+
+        .saudacao-usuario {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .nome-usuario {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .icones-cabecalho {
+            display: flex;
+            gap: 15px;
+            font-size: 18px;
+        }
+
+        .icone-botao {
+            cursor: pointer;
+            color: #666;
+        }
+
+        .navegacao-categorias {
+            display: flex;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .link-categoria {
+            flex: 1;
+            padding: 12px 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #666;
+            font-size: 13px;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .link-categoria:hover {
+            background-color: #f0f0f0;
+        }
+
+        .link-categoria.ativo {
+            color: #5b7fdb;
+            border-bottom-color: #5b7fdb;
+            font-weight: bold;
+        }
+
+        .barra-busca {
+            padding: 15px;
+            background-color: #f8f8f8;
+        }
+
+        .campo-busca {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .grade-produtos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .cartao-produto {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .cartao-produto:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .imagem-produto {
+            width: 100%;
+            height: 80px;
+            background-color: #f5f5f5;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .nome-produto {
+            font-size: 11px;
+            color: #333;
+            margin-bottom: 5px;
+            min-height: 30px;
+        }
+
+        .preco-produto {
+            font-size: 14px;
+            font-weight: bold;
+            color: #5b7fdb;
+            margin-bottom: 8px;
+        }
+
+        .botao-adicionar {
+            width: 100%;
+            padding: 6px;
+            background-color: #5b7fdb;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .botao-adicionar:hover {
+            background-color: #4a6bc4;
+        }
+
+        .rodape-loja {
+            padding: 15px;
+            background-color: #5b7fdb;
+            text-align: center;
+        }
+
+        .botao-atendimento {
+            width: 100%;
+            padding: 12px;
+            background-color: #4a6bc4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .botao-atendimento:hover {
+            background-color: #3a5ab4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-loja">
+        <!-- Cabeçalho -->
+        <header class="cabecalho-loja">
+            <div class="logo-pequena">🧸</div>
+            <div class="info-usuario">
+                <p class="saudacao-usuario">Olá você está logado(a)! 👋</p>
+                <p class="nome-usuario">TOYS</p>
+            </div>
+            <div class="icones-cabecalho">
+                <span class="icone-botao">🔍</span>
+                <span class="icone-botao">🛒</span>
+            </div>
+        </header>
+
+        <!-- Navegação -->
+        <nav class="navegacao-categorias">
+            <a href="brinquedos.html" class="link-categoria ativo">Brinquedos</a>
+            <a href="jogos.html" class="link-categoria">Jogos</a>
+            <a href="lancamentos.html" class="link-categoria">Lançamentos</a>
+            <a href="promocao.html" class="link-categoria">Promoção</a>
+        </nav>
+
+        <!-- Barra de busca -->
+        <div class="barra-busca">
+            <input type="text" class="campo-busca" placeholder="Buscar produtos...">
+        </div>
+
+        <!-- Grade de produtos -->
+        <div class="grade-produtos">
+            <div class="cartao-produto">
+                <div class="imagem-produto">🚗</div>
+                <p class="nome-produto">Carrinho de Controle Remoto</p>
+                <p class="preco-produto">R$ 89,90</p>
+                <button class="botao-adicionar">Adicionar</button>
+            </div>
+
+            <div class="cartao-produto">
+                <div class="imagem-produto">🏀</div>
+                <p class="nome-produto">Bola de Basquete Infantil</p>
+                <p class="preco-produto">R$ 45,90</p>
+                <button class="botao-adicionar">Adicionar</button>
+            </div>
+
+            <div class="cartao-produto">
+                <div class="imagem-produto">🧩</div>
+                <p class="nome-produto">Quebra-cabeça 100 Peças</p>
+                <p class="preco-produto">R$ 32,90</p>
+                <button class="botao-adicionar">Adicionar</button>
+            </div>
+
+            <div class="cartao-produto">
+                <div class="imagem-produto">🎸</div>
+                <p class="nome-produto">Guitarra Musical Infantil</p>
+                <p class="preco-produto">R$ 67,90</p>
+                <button class="botao-adicionar">Adicionar</button>
+            </div>
+
+            <div class="cartao-produto">
+                <div class="imagem-produto">🪀</div>
+                <p class="nome-produto">Ioiô Profissional</p>
+                <p class="preco-produto">R$ 28,90</p>
+                <button class="botao-adicionar">Adicionar</button>
+            </div>
+
+            <div class="cartao-produto">
+                <div class="imagem-produto">🎨</div>
+                <p class="nome-produto">Kit de Pintura Completo</p>
+                <p class="preco-produto">R$ 54,90</p>
+                <button class="botao-adicionar">Adicionar</button>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <footer class="rodape-loja">
+            <button class="botao-atendimento">
+                Dúvidas Relacionadas Da Loja Toys 🏪
+            </button>
+        </footer>
+    </div>
+</body>
+</html>
