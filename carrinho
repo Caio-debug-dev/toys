@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Loja de Brinquedos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8e4d9;
+            padding: 20px;
+        }
+
+        .container-carrinho {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cabecalho-carrinho {
+            background-color: #f5f0dc;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-pequena {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .titulo-carrinho {
+            flex: 1;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .icones-cabecalho {
+            display: flex;
+            gap: 15px;
+            font-size: 18px;
+        }
+
+        .icone-botao {
+            cursor: pointer;
+            color: #666;
+        }
+
+        .conteudo-carrinho {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .icone-carrinho-vazio {
+            font-size: 80px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .mensagem-carrinho-vazio {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .botao-continuar-comprando {
+            padding: 12px 30px;
+            background-color: #5b7fdb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .botao-continuar-comprando:hover {
+            background-color: #4a6bc4;
+            transform: scale(1.05);
+        }
+
+        .rodape-carrinho {
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+        }
+
+        .navegacao-rapida {
+            display: flex;
+            justify-content: space-around;
+            font-size: 24px;
+        }
+
+        .botao-navegacao {
+            cursor: pointer;
+            padding: 10px;
+            transition: all 0.3s;
+        }
+
+        .botao-navegacao:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-carrinho">
+        <!-- Cabeçalho -->
+        <header class="cabecalho-carrinho">
+            <div class="logo-pequena">🧸</div>
+            <h1 class="titulo-carrinho">Meu Carrinho</h1>
+            <div class="icones-cabecalho">
+                <span class="icone-botao">🔍</span>
+                <span class="icone-botao">👤</span>
+            </div>
+        </header>
+
+        <!-- Conteúdo do carrinho vazio -->
+        <div class="conteudo-carrinho">
+            <div class="icone-carrinho-vazio">🛒</div>
+            <p class="mensagem-carrinho-vazio">Seu carrinho está vazio.</p>
+            <button class="botao-continuar-comprando" onclick="window.location.href='brinquedos.html'">
+                Continuar Comprando
+            </button>
+        </div>
+
+        <!-- Rodapé com navegação -->
+        <footer class="rodape-carrinho">
+            <nav class="navegacao-rapida">
+                <a href="brinquedos.html" class="botao-navegacao" title="Loja">🏪</a>
+                <a href="carrinho-vazio.html" class="botao-navegacao" title="Carrinho">🛒</a>
+                <a href="login.html" class="botao-navegacao" title="Perfil">👤</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
