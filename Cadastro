@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Loja de Brinquedos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8e4d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container-cadastro {
+            background-color: #f5f0dc;
+            padding: 40px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 320px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-brinquedos {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .titulo-cadastro {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .campo-formulario {
+            margin-bottom: 15px;
+        }
+
+        .entrada-texto {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        .opcoes-genero {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .opcao-genero {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            cursor: pointer;
+            font-size: 24px;
+            transition: all 0.3s;
+        }
+
+        .opcao-genero:hover {
+            border-color: #5b7fdb;
+            background-color: #f0f4ff;
+        }
+
+        .botao-encerrar {
+            width: 100%;
+            padding: 12px;
+            background-color: #5b7fdb;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .botao-encerrar:hover {
+            background-color: #4a6bc4;
+        }
+
+        .divisor {
+            margin: 25px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .linha-divisor {
+            flex: 1;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        .texto-divisor {
+            color: #999;
+            font-size: 13px;
+        }
+
+        .botoes-redes-sociais {
+            display: flex;
+            gap: 10px;
+        }
+
+        .botao-rede-social {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .botao-facebook {
+            color: #1877f2;
+            border-color: #1877f2;
+        }
+
+        .botao-facebook:hover {
+            background-color: #1877f2;
+            color: white;
+        }
+
+        .botao-google {
+            color: #db4437;
+            border-color: #db4437;
+        }
+
+        .botao-google:hover {
+            background-color: #db4437;
+            color: white;
+        }
+
+        .rodape-cadastro {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .link-voltar {
+            color: #5b7fdb;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .link-voltar:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-cadastro">
+        <div class="logo-brinquedos">
+            🧸
+        </div>
+        <h2 class="titulo-cadastro">Cadastrar</h2>
+        
+        <form class="formulario-cadastro">
+            <div class="campo-formulario">
+                <input type="text" class="entrada-texto" placeholder="Nome e sobrenome">
+            </div>
+
+            <div class="opcoes-genero">
+                <button type="button" class="opcao-genero" title="Masculino">
+                    👦
+                </button>
+                <button type="button" class="opcao-genero" title="Feminino">
+                    👧
+                </button>
+            </div>
+            
+            <button type="submit" class="botao-encerrar">ENCERRAR</button>
+        </form>
+
+        <div class="divisor">
+            <div class="linha-divisor"></div>
+            <span class="texto-divisor">ou</span>
+            <div class="linha-divisor"></div>
+        </div>
+
+        <div class="botoes-redes-sociais">
+            <button class="botao-rede-social botao-facebook">
+                <span>f</span>
+                Facebook
+            </button>
+            <button class="botao-rede-social botao-google">
+                <span>G</span>
+                Google
+            </button>
+        </div>
+
+        <div class="rodape-cadastro">
+            <p style="font-size: 13px; color: #666; margin-bottom: 8px;">Já tem uma conta?</p>
+            <a href="login.html" class="link-voltar">Fazer login</a>
+        </div>
+    </div>
+</body>
+</html>
